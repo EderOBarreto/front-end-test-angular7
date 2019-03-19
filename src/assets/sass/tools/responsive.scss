@@ -1,0 +1,90 @@
+$break-small: 576px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-extra-large: 1200px;
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@mixin responsiveColumns($nameCol:"col") 
+{
+    .#{$nameCol} {
+        display: flex;
+        width: 100%;
+        margin-left: auto;
+
+        &-1 {
+            width: 8.33333333333%;
+        }
+    
+        &-2 {
+            width: 16.6666666666%;
+        }
+    
+        &-3 {
+            width: 24.9999999999%;
+        }
+    
+        &-4 {
+            width: 33.3333333333%;
+        }
+    
+        &-5 {
+            width: 41.6666666665%;
+        }
+    
+        &-6 {
+            width: 50%;
+        }
+    
+        &-7 {
+            width: 58.3333333331%;
+        }
+    
+        &-8 {
+            width: 66.6666666666%;
+        }
+    
+        &-9 {
+            width:74.99999999997%;
+        }
+    
+        &-10 {
+            width: 83.3333333333%;
+        }
+    
+        &-11 {
+            width: 91.6666666663%;
+        }
+    
+        &-12 {
+            width: 100%;
+        }
+    }
+}
+
+// extra small screen
+@include responsiveColumns(col);
+
+@media (min-width: $break-small){
+
+    @include responsiveColumns(col-sm);
+}
+
+@media (min-width: $break-medium){
+
+    @include responsiveColumns(col-md);
+}
+
+@media (min-width: $break-large){
+
+    @include responsiveColumns(col-lg);
+}
+
+@media (min-width: $break-extra-large){
+
+    @include responsiveColumns(col-xl);
+}

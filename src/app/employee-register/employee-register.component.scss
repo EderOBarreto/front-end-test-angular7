@@ -1,0 +1,26 @@
+div {
+    padding: 5px;
+}
+
+.btn{
+    color: #EEE;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: .25rem;
+
+    &--save{
+        background-color: green;
+        order:1;
+    }
+
+    &--cancel {
+        background-color:#DF3545;
+    }
+}
+
+.row {
+    justify-content: space-between;
+}
+
