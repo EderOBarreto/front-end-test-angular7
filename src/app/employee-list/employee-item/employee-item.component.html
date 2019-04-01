@@ -1,0 +1,12 @@
+<tr class="d-flex">
+  <td scope="row" class="col-2"> {{ index + 1 }} </td>
+  <td class="col-6">{{ employee.name }}</td>
+  <td class="col-4">
+    <button
+    (click) = "onEdit(index)"
+    class="btn btn--edit">Edit</button>
+    <button
+    (click) = "onDelete()"
+    class="btn btn--delete" >Delete</button>
+  </td>
+</tr>

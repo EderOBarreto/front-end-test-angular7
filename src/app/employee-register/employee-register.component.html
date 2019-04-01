@@ -1,73 +1,145 @@
-<form>
-  <h3>Create/Edit</h3>
-  <hr>
-  <div class="form-row">
-    <div class="col-12">
-      <label for="inName"></label>
-      <input type="text" id="inName" class="form-control" placeholder="Name">
-    </div>
-  </div>
-  
-  <div class="form-row">
-    <div class="col-6 col-md-4">
-      <label for="inAge"> </label>
-      <input type="number" id="inAge" class="form-control" placeholder="Age">
-    </div>
-    
-    <div class="col-6 col-md-4">
-      <label for="inBirthday"></label>
-      <input type="date" id="inBirthday" class="form-control">
-    </div>
-    
-    <div class="col-6 col-md-4">
-      <label for="inTel"> </label>
-      <input type="text" id="inTel" class="form-control" placeholder="tel">
-    </div>
-  </div>
+<div class="form-border">
+  <h1>Employee Register</h1>
+  <form [formGroup]="form" (ngSubmit)="onSave()">
+    <h3>Create/Edit</h3>
+    <hr />
+    <div formGroupName = "employee" >
+      <div class="form-row">
+        <div class="col-12">
+          <label for="inName"></label>
+          <input
+            type="text"
+            id="inName"
+            class="form-control"
+            placeholder="Name"
+            formControlName = "name"
+          />
+        </div>
+      </div>
 
-  <div class="form-row">
-    <div class="col-12 col-md-6 col-sm-6">
-      <label for="inRG"> </label>
-      <input type="text" id="inRG" class="form-control" placeholder="RG">
-    </div>
-  
-    <div class="col-12 col-md-6 col-sm-6">
-      <label for="inCPF"> </label>
-      <input type="text" id="inCPF" class="form-control" placeholder="CPF">
-    </div>
-  </div>
+      <div class="form-row">
+        <div class="col-6 col-md-4">
+          <label for="inAge"> </label>
+          <input
+            type="number"
+            id="inAge"
+            class="form-control"
+            placeholder="Age"
+            formControlName = "age"
+          />
+        </div>
 
-  <div class="form-row">
-    <div class="col-12 col-md-9 col-lg-10 col-xl-11">
-      <label for="inAddress"></label>
-      <input type="text" id="inAddress" class="form-control" placeholder="Adress">
-    </div>
-  
-    <div class="col-4 col-md-3 col-lg-2 col-xl-1">
-      <label for="inAddressNumber"></label>
-      <input type="text" id="inAddressNumber" class="form-control" placeholder="Number">
-    </div>
-  </div>
+        <div class="col-6 col-md-4">
+          <label for="inBirthday"></label>
+          <input 
+          type="date" 
+          id="inBirthday" 
+          class="form-control"
+          formControlName = "dateNasc"/>
+        </div>
 
-  <div class="form-row">
-    <div class="col-6 col-md-5 col-lg-4 col-xl-3">
-      <label for="inCity"></label>
-      <input type="text" id="inCity" class="form-control" placeholder="City">
-    </div>
-  
-    <div class="col-6 col-md-5 col-lg-4 col-xl-3">
-      <label for="inState"> </label>
-      <input type="text" id="inState" class="form-control" placeholder="State">
-    </div>
-  </div>
+        <div class="col-6 col-md-4">
+          <label for="inTel"> </label>
+          <input
+            type="text"
+            id="inTel"
+            class="form-control"
+            placeholder="tel"
+            formControlName = "phone"
+          />
+        </div>
+      </div>
 
-  <div class="form-row">
-    <label for="inNotes"> </label>
-    <textarea id="inNotes" cols="30" rows="10" class="form-control" placeholder="Notes"></textarea>
-  </div>
+      <div class="form-row">
+        <div class="col-12 col-md-6 col-sm-6">
+          <label for="inRG"> </label>
+          <input 
+          type="text" 
+          id="inRG" 
+          class="form-control" 
+          placeholder="RG"
+          formControlName = "rg"/>
+        </div>
 
-  <div class="row">
-    <button type="button" class="btn btn--save">Save</button>
-    <button type="button" class="btn btn--cancel">Cancel</button>
-  </div>
-</form>
+        <div class="col-12 col-md-6 col-sm-6">
+          <label for="inCPF"> </label>
+          <input
+            type="text"
+            id="inCPF"
+            class="form-control"
+            placeholder="CPF"
+            formControlName = "cpf"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-12 col-md-9 col-lg-10 col-xl-11">
+          <label for="inAddress"></label>
+          <input
+            type="text"
+            id="inAddress"
+            class="form-control"
+            placeholder="Adress"
+            formControlName = "address"
+          />
+        </div>
+
+        <div class="col-4 col-md-3 col-lg-2 col-xl-1">
+          <label for="inAddressNumber"></label>
+          <input
+            type="text"
+            id="inAddressNumber"
+            class="form-control"
+            placeholder="Number"
+            formControlName = "addressNumber"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-6 col-md-5 col-lg-4 col-xl-3">
+          <label for="inCity"></label>
+          <input
+            type="text"
+            id="inCity"
+            class="form-control"
+            placeholder="City"
+            formControlName = "city"
+          />
+        </div>
+
+        <div class="col-6 col-md-5 col-lg-4 col-xl-3">
+          <label for="inState"> </label>
+          <input
+            type="text"
+            id="inState"
+            class="form-control"
+            placeholder="State"
+            formControlName = "state"
+          />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="inNotes"> </label>
+        <textarea
+          id="inNotes"
+          cols="30"
+          rows="10"
+          class="form-control"
+          placeholder="Notes"
+          formControlName = "notes"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="submit" class="btn btn--save">Save</button>
+      <button 
+      type="button" 
+      class="btn btn--cancel"
+      (click)= "onCancel()">Cancel</button>
+    </div>
+  </form>
+</div>
